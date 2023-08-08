@@ -8,7 +8,7 @@ function iniciarTemporizador() {
 
   // Iniciar/Reiniciar el tiempo
   clearInterval(temporizador);
-  tiempo = 5;
+  tiempo = 30;
   document.getElementById("tiempo").textContent = tiempo;
 
   temporizador = setInterval(function () {
@@ -94,9 +94,10 @@ document.addEventListener("DOMContentLoaded", function () {
   var botonEnviar = document.createElement('button');
 
   botonEnviar.id = 'enviar';
-  botonEnviar.className = 'btn btn-enviar fas fa-paper-plane';
+  botonEnviar.className = 'btn btn-disabled btn-enviar fas fa-paper-plane';
   botonEnviar.type = 'submit';
   botonEnviar.textContent = ' Enviar';
+  botonEnviar.disabled = true;
   formulario.appendChild(botonEnviar);
 
   botonEnviar.addEventListener('click', function (event) {
@@ -127,6 +128,13 @@ document.addEventListener("DOMContentLoaded", function () {
         inputElement.classList.toggle("resp-novalida", !esRespuestaValida);
       }
     });
-  }
 
+    // Mostar Alert con las respuestas del usuario
+    var respuestasAlert = "Respuestas del usuario:\n";
+    respuestasUsuario.forEach(function (respuestaUsuario) {
+      respuestasAlert += "Pregunta " + (respuestaUsuario.pregunta + 1) + ": " + respuestaUsuario.respuesta + "\n";
+    });
+    alert(respuestasAlert);
+
+  }
 });
