@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preguntas</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="icono.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+<body>
+
+  <div class="contenedor">
+    <div class="botones">
+      <h1>Tiempo</h1>
+      <h2 id="tiempo">30s</h2>
+      <button class="btn" onclick="iniciarTemporizador()">
+        <i class="fas fa-play"></i> Iniciar
+      </button>
+      <button class="btn" onclick="detenerTemporizador()">
+        <i class="fas fa-times"></i> Detener
+      </button>
+    </div>
+
+    <div class="form-contenedor">
+
+      <form class="form-preguntas" id="preguntas-form">
+        <h2 id="tiempo">Preguntas</h2>
+        <!-- <button id="enviar" class="btn btn-enviar" type="submit">Enviar</button> -->
+      </form>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

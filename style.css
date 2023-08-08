@@ -1,0 +1,145 @@
+/* ########################################################################## */
+:root {
+    --primary-color: #FCC63D;
+    --first-bg-color: #14161E;
+    --second-bg-color: #1A1D27;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--first-bg-color);
+    color: white;
+}
+
+h1,
+h2 {
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: 20px
+}
+
+h2 {
+    color: var(--primary-color);
+}
+
+/* ########################################################################## */
+.btn {
+    background-color: var(--primary-color);
+    color: var(--second-bg-color);
+    padding: 7px 20px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    font-size: 25px;
+    border-radius: 25px;
+    transition: transform .4s;
+    margin: 20px;
+    float: right;
+    width: 175px;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.btn-disabled {
+    background-color: gray !important;
+    color: var(--second-bg-color) !important;
+}
+
+.btn-disabled:hover {
+    transform: none !important;
+    border: 2px solid gray !important;
+    cursor: default !important;
+}
+
+/* ########################################################################## */
+.contenedor {
+    background-color: #1A1D27;
+    height: 90vh;
+    margin: 30px 10%;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-contenedor {
+    background-color: var(--first-bg-color);
+    height: 90%;
+    width: 70%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+}
+
+.form-preguntas {
+    overflow: auto;
+    padding: 30px;
+}
+
+/*
+form {
+    display: flex;
+    flex-direction: column;
+}
+*/
+
+input {
+    width: 50%;
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        height: auto;
+        flex-direction: column;
+    }
+
+    input {
+        width: 90%;
+    }
+
+}
+
+/* ############################################################################# */
+/* RESPUESTAS */
+.resp-valida {
+    background-color: green;
+    color: greenyellow;
+    font-weight: bold;
+    border: 2px solid greenyellow;
+}
+
+.resp-novalida {
+    background-color: #FF4444;
+    color: var(--first-bg-color);
+    font-weight: bold;
+    border: 2px solid red;
+}
