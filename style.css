@@ -27,6 +27,14 @@ h2 {
     color: var(--primary-color);
 }
 
+.github {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+    z-index: 100;
+}
+
 /* ########################################################################## */
 .btn {
     background-color: var(--primary-color);
